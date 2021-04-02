@@ -1,2 +1,2 @@
 # circleCalculator
-A basic circle calculator written in HTML, SASS and JS
+A basic circle calculator written in HTML, SASS and JS. Currently, it can calculate the diameter, area and circumference from the radius. I might add stuff in the future, not sure what.
