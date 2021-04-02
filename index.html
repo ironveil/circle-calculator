@@ -5,11 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circle Calculator</title>
+    <link rel="stylesheet" href="/src/css/index.min.css">
 </head>
 <body>
     <div class="inputWrapper">
-        <input type="number" id="radius">
-        <button onclick=calculate()></button>
+        <p class="radius">Radius:</p>
+        <input type="number" id="radius" placeholder="radius">
+        <button onclick=calculate()>Calculate</button>
+    </div>
+    <div class="outputWrapper">
+        <p class="output">Output:</p>
+        
+        <div class="diameterWrapper">
+            <p class="diameterLabel label">Diameter:</p>
+            <p id="diameter" class="outputNumber">0</p>
+        </div>
+
+        <div class="arc">
+            <p class="label">hdbg</p>
+            <p class="outputN">dfjbgds</p>
+        </div>
     </div>
     <script src="/src/js/calc.js"></script>
 </body>
