@@ -4,15 +4,64 @@
     padding: 0;
     margin: 0;
     font-family: 'Source Code Pro', monospace;
+    color: #fff;
 }
 
 body {
-    background-color: #000000;
+    background-color: #000;
+}
+
+p::selection {
+    background-color: #fff;
+    color: #121212;
+}
+
+input::selection {
+    background-color: #fff;
+    color: #121212;
+}
+
+a::selection {
+    background-color: none;
+    color: none;
+}
+
+.header {
+    margin: 10vh;
+
+    p.heading {
+        font-size: 32pt;
+        font-weight: bold;
+        padding-bottom: 16px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 11pt;
+        padding: 8px 12px;
+        border: 2px solid #121212;
+        background-color: #121212;
+        transition: 0.2s ease-in-out;
+
+        &:visited {
+            color: #fff;
+        }
+
+        &:hover {
+            border-color: #fff;
+        }
+
+        &:active {
+            background-color: #fff;
+            border-color: #fff;
+            color: #121212;
+        }
+    }
 }
 
 .inputWrapper {
     position: absolute;
-    top: 0;
+    top: 20vh;
     left: 0;
     margin: 10vh;
     color: #ffffff;
@@ -60,13 +109,13 @@ body {
         border: 2px solid #121212;
         color: #ffffff;
         transition: 0.2s ease-in-out;
+        font-size: 11pt;
 
         &:hover {
             border: 2px solid #ffffff;
         }
 
-        &:active,
-        &:focus {
+        &:active {
             background-color: #ffffff;
             border: 2px solid #ffffff;
             color: #121212;
@@ -76,7 +125,7 @@ body {
 
 .outputWrapper {
     position: absolute;
-    top: 0;
+    top: 20vh;
     right: 0;
     margin: 10vh;
     width: 50%;
