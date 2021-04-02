@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    background-color: #000000;
+}
+
+.inputWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10vh;
+    color: #ffffff;
+    width: 20%;
+
+    p.radius {
+        padding: 8px 0;
+        font-size: 16pt;
+    }
+
+    input#radius {
+        background-color: #121212;
+        border: 2px solid #121212;
+        border-radius: none;
+        padding: 8px;
+        color: #ffffff;
+        width: 100%;
+        box-sizing: border-box;
+        resize: none;
+        -moz-appearance: textfield;
+        transition: 0.2s ease-in-out;
+        font-size: 11pt;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            display: none;
+        }
+
+        &:focus {
+            border: 2px solid #ffffff;
+            border-radius: none;
+        }
+
+        &:invalid {
+            border: 2px solid #ff0000;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin: 16px 0;
+        padding: 8px;
+        background-color: #121212;
+        border: 2px solid #121212;
+        color: #ffffff;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            border: 2px solid #ffffff;
+        }
+
+        &:active,
+        &:focus {
+            background-color: #ffffff;
+            border: 2px solid #ffffff;
+            color: #121212;
+        }
+    }
+}
+
+.outputWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10vh;
+    width: 50%;
+    
+    p.output {
+        color: #ffffff;
+        padding: 8px 0 0 0;
+        font-size: 16pt;
+    }
+
+    div {
+        padding: 10px;
+        background-color: #121212;
+        color: #ffffff;
+        font-size: 11pt;
+        margin: 8px 0;
+        display: inline-flex;
+        width: 100%;
+
+        p.label {
+            text-align: left;
+            width: auto;
+        }
+
+        p.outputNumber {
+            position: absolute;
+            right: 0;
+            text-align: right;
+            width: auto;
+        }
+    }
+}
