@@ -10,7 +10,7 @@ function calculate() {
     var area = pi * (radius ** 2);
     var circumference = pi * diameter;
 
-    diameterOutput.innerHTML = diameter;
-    areaOutput.innerHTML = area;
-    circumferenceOutput.innerHTML = circumference;
+    diameterOutput.innerHTML = diameter.toString().substring(0,8);
+    areaOutput.innerHTML = area.toString().substring(0,8);
+    circumferenceOutput.innerHTML = circumference.toString().substring(0,8);
 }
