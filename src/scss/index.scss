@@ -158,3 +158,40 @@ a::selection {
         }
     }
 }
+
+@media (max-width: 800px) {
+    .header {
+        margin: 4vh;
+
+        .heading {
+            font-size: 28;
+        }
+    }
+
+    .inputWrapper {
+        margin: 10vw;
+        top: 25vh;
+        width: 80vw;
+        display: block;
+
+        input#radius {
+            padding: 4vw;
+        }
+        
+        button {
+            padding: 4vw;
+        }
+    }
+
+    .outputWrapper {
+        margin: 10vw;
+        top: 53vh;
+        left: 0;
+        width: 72vw;
+        display: block;
+
+        div {
+            padding: 4vw;
+        }
+    }
+}
