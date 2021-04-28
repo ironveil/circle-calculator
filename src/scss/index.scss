@@ -3,183 +3,121 @@
 $black: #000;
 $grey: #303030;
 $white: #fff;
-$margin: 10vh;
+$red: #cc241d;
+$margin: 6vh;
+$animate: 200ms;
+
+$heading: 16pt;
+$body: 12pt;
 
 * {
     padding: 0;
     margin: 0;
+    color: $white;
+    background-color: $black;
     font-family: 'Fira Code', monospace;
 }
 
 body {
+    background: $black;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'input output output';
+    padding: 0 $margin;
     background-color: $black;
-    color: $white;
-}
+    gap: $margin $margin * 2;
 
-input::selection,
-p::selection {
-    background-color: $white;
-    color: $grey;
-}
-
-a::selection {
-    background-color: none;
-    color: none;
-}
-
-.section {
-    margin: $margin;
-    position: absolute;
-}
-
-.header {
-
-    p.heading {
-        font-size: 32pt;
-        font-weight: bold;
-        padding-bottom: 16px;
-    }
-
-    a {
-        text-decoration: none;
-        font-size: 11pt;
-        padding: 8px 12px;
-        border: 2px solid $grey;
-        background-color: $grey;
-        transition: 0.2s ease-in-out;
-
-        &:visited {
-            color: $white;
-        }
-
-        &:hover {
-            border-color: $white;
-        }
-
-        &:active {
-            background-color: $white;
-            border-color: $white;
-            color: $grey;
-        }
-    }
-}
-
-.inputWrapper {
-    top: 20vh;
-    left: 0;
-    width: 20%;
-
-    p.radius {
-        padding: 8px 0;
-        font-size: 18pt;
-    }
-
-    input#radius {
-        background-color: $grey;
-        border: 2px solid $grey;
-        border-radius: none;
-        padding: 8px;
-        color: $white;
-        width: 100%;
-        box-sizing: border-box;
-        -moz-appearance: textfield;
-        transition: 0.2s ease-in-out;
-        font-size: 11pt;
-
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-            display: none;
-        }
-
-        &:focus {
-            border-color: $white;
-            border-radius: none;
-        }
-
-        &:invalid {
-            border-color: #f00;
-        }
-    }
-
-    button {
-        width: 100%;
-        margin: 16px 0;
-        padding: 8px;
-        background-color: $grey;
-        border: 2px solid $grey;
-        color: $white;
-        transition: 0.2s ease-in-out;
-        font-size: 11pt;
-
-        &:hover {
-            border-color: #ffffff;
-        }
-
-        &:active {
-            background-color: $white;
-            border-color: $white;
-            color: $grey;
-        }
-    }
-}
-
-.outputWrapper {
-    top: 20vh;
-    right: 0;
-    width: 50%;
-    
-    p.output {
-        padding: 8px 0 0 0;
-        font-size: 18pt;
-    }
-
-    div {
-        padding: 10px;
-        background-color: $grey;
-        margin: 8px 0;
-        display: inline-flex;
-        width: 100%;
+    .header {
+        grid-area: header;
+        padding-top: $margin;
 
         p {
-            font-size: 11pt;
+            font-size: 48pt;
+            padding-bottom: 16px;
+        }
+
+        a {
+            font-size: $body;
+            text-decoration: none;
+            padding: 12px;
+            background-color: $grey;
+            transition: ease-in-out $animate;
             width: auto;
 
-            &.label {
-                text-align: left;
-            }
-
-            &.outputNumber {
-                position: absolute;
-                right: 0;
+            &:hover {
+                background-color: $white;
+                color: $black;
             }
         }
+    }
+
+    .input {
+        grid-area: input;
+
+        p {
+            font-size: $heading;
+            padding: 8px 0;
+        }
+
+        input {
+            width: 70%;
+            color: $white;
+            background-color: $grey;
+            border: 2px solid $grey;
+            border-radius: none;
+            padding: 8px;
+            font-size: $body;
+
+            &:focus {
+                border-color: $white;
+            }
+
+            &:invalid {
+                border-color: $red;
+            }
+        }
+
+        button {
+            width: 20%;
+            padding: 8px;
+            font-size: $body;
+            background-color: $grey;
+            border: 2px solid $grey;
+            transition: ease-in-out $animate;
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+
+    .output {
+        grid-area: output;
     }
 }
 
-@media (max-width: 800px) {
-    .section {
-        margin: 4vh;
-        width: 80%;
-        position: initial;
-    }
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-areas: 
+        'header'
+        'input'
+        'output';
 
-    .inputWrapper {
-        input#radius {
-            padding: 2vh;
+        .header {
+            p {
+                font-size: 32pt;
+            }
         }
-        button {
-            padding: 2vh;
-        }
-    }
 
-    .outputWrapper {
-        margin-right: 0;
-        div {
-            padding: 2vh;
-            box-sizing: border-box;
-
-            p.outputNumber {
-                right: 8vh;
+        .input {
+            //padding-right: $margin;
+            input {
+                width: 100%;
             }
         }
     }
