@@ -98,6 +98,11 @@ body {
 
     .output {
         grid-area: output;
+
+        p.title {
+            font-size: $heading;
+            padding: 8px 0;
+        }
     }
 }
 
