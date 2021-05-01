@@ -8,7 +8,9 @@ $margin: 2.5vw;
 $animate: 200ms;
 
 $heading: 16pt;
+$mheading: 14pt;
 $body: 12pt;
+$mbody: 10pt;
 
 * {
     padding: 0;
@@ -57,7 +59,7 @@ body {
 
     .input {
         grid-area: input;
-        //display: block;
+
         p {
             font-size: $heading;
             padding: 8px 0;
@@ -70,7 +72,7 @@ body {
             width: 100%;
 
             input {
-                width: auto;
+                width: 10%;
                 color: $white;
                 background-color: $grey;
                 border: 2px solid $grey;
@@ -124,6 +126,7 @@ body {
             'label output';
             margin-bottom: 16px;
             border: 2px solid $grey;
+            font-size: $body;
 
             .label {
                 grid-area: label;
@@ -153,19 +156,53 @@ body {
         grid-template-areas: 
         'header'
         'input'
-        'output';
+        'output'
+        'footer';
+        padding: 8vw;
 
         .header {
+            grid-area: header;
+            padding-bottom: 24px;
+
             p {
-                font-size: 32pt;
+                font-size: 24pt;
+                overflow: hidden;
+                padding-bottom: 24px;
+            }
+
+            a {
+                font-size: $mbody;
+                padding: 8px;
             }
         }
 
         .input {
-            //padding-right: $margin;
-            input {
-                width: 100%;
+            grid-area: input;
+            padding-bottom: 4vw;
+            p {
+                font-size: $mheading;
             }
+            .input {
+                input, button {
+                    font-size: $mbody;
+                    padding: 8px;
+                }
+            }
+        }
+
+        .output {
+            grid-area: output;
+            p.title {
+                font-size: 14pt;
+            }
+            div {
+                font-size: $mbody;
+            }
+        }
+        .footer {
+            grid-area: footer;
+            font-size: $mbody;
+            bottom: 8vw;
         }
     }
 }
