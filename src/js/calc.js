@@ -5,7 +5,6 @@ function calculate() {
     var diameterOutput = document.getElementById("diameter");
     var areaOutput = document.getElementById("area");
     var circumferenceOutput = document.getElementById("circumference");
-    var error = document.getElementById("error");
 
     var diameter = radius * 2;
     var area = pi * (radius ** 2);
