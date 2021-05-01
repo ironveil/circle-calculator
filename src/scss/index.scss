@@ -4,7 +4,7 @@ $black: #000;
 $grey: #303030;
 $white: #fff;
 $red: #cc241d;
-$margin: 2vw;
+$margin: 2.5vw;
 $animate: 200ms;
 
 $heading: 16pt;
@@ -25,7 +25,8 @@ body {
     display: grid;
     grid-template-areas: 
     'header header header'
-    'input output output';
+    'input output output'
+    'footer footer footer';
     padding: 0 $margin;
     background-color: $black;
     gap: $margin;
@@ -132,6 +133,17 @@ body {
                 grid-area: output;
                 text-align: right;
             }
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+        position: absolute;
+        bottom: $margin;
+
+        p {
+            color: $grey;
+            font-size: $body;
         }
     }
 }
