@@ -5,6 +5,7 @@ $grey: #303030;
 $white: #fff;
 $red: #cc241d;
 $margin: 2.5vw;
+$mmargin: 6vw;
 $animate: 200ms;
 
 $heading: 16pt;
@@ -158,16 +159,16 @@ body {
         'input'
         'output'
         'footer';
-        padding: 8vw;
+        padding: $mmargin;
 
         .header {
             grid-area: header;
-            padding-bottom: 24px;
+            padding-bottom: $mmargin;
 
             p {
                 font-size: 24pt;
                 overflow: hidden;
-                padding-bottom: 24px;
+                padding-bottom: $mmargin;
             }
 
             a {
@@ -178,7 +179,7 @@ body {
 
         .input {
             grid-area: input;
-            padding-bottom: 4vw;
+            padding-bottom: $mmargin / 3;
             p {
                 font-size: $mheading;
             }
@@ -193,7 +194,7 @@ body {
         .output {
             grid-area: output;
             p.title {
-                font-size: 14pt;
+                font-size: $mheading;
             }
             div {
                 font-size: $mbody;
@@ -202,7 +203,7 @@ body {
         .footer {
             grid-area: footer;
             font-size: $mbody;
-            bottom: 8vw;
+            bottom: $mmargin;
         }
     }
 }
