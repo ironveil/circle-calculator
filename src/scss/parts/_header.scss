@@ -1,0 +1,27 @@
+// SCSS file for the header
+
+.header {
+    grid-area: header;
+
+    // Title
+    p {
+        font-size: $ftitle;
+        padding-bottom: 16px;
+    }
+
+    // Link to my GH
+    a {
+        width: fit-content;
+        background-color: $grey;
+        font-size: $fbody;
+        text-decoration: none;
+        padding: $pbutton;
+        transition: ease-in-out $animate;
+
+        // Hover
+        &:hover {
+            background-color: $white;
+            color: $grey;
+        }
+    }
+}
