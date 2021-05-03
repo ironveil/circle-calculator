@@ -1,0 +1,66 @@
+// SCSS file for the input pane
+
+.input {
+    grid-area: input;
+
+    // Title
+    p {
+        font-size: $fheader;
+        padding: $ptext 0;
+    }
+
+    // Input area
+    span {
+        width: 100%;
+        align-items: left;
+        display: inline-flex;
+
+        // Input
+        input {
+            width: 10%;
+            flex-grow: 1;
+            background-color: $grey;
+            color: $white;
+            border: 2px solid $grey;
+            font-size: $fbody;
+            padding: $pbutton - 2px;
+            -moz-appearance: textfield;
+            outline: none;
+
+            // Focused
+            &:focus  {
+                border-color: $white;
+            }
+
+            // Wrong input
+            &:invalid {
+                border-color: $red;
+            }
+
+            // Removes stupid buttons
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        // Calculate button
+        button {
+            width:fit-content;
+            display: inline-block;
+            background-color: $grey;
+            border: none;
+            font-size: $fbody;
+            padding: $pbutton;
+            margin-left: $ptext;
+            transition: ease-in-out $animate;
+
+            // Hover
+            &:hover {
+                background-color: $white;
+                color: $grey;
+            }
+        }
+    }
+}
