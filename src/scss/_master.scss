@@ -8,6 +8,7 @@ $red: #cc241d;
 
 // Font sizes
 $ftitle: 48pt;
+$fmtitle: 32pt;
 $fheader: 16pt;
 $fmheader: 14pt;
 $fbody: 12pt;
@@ -17,7 +18,11 @@ $fmbody: 10pt;
 $margin: 2.5vw;
 $mmargin: 6vw;
 $pbutton: 14px;
+$pmbutton: 8px;
 $ptext: 16px;
 
 // Animations
 $animate: 150ms;
+
+// max-width
+$mobile: 700px;

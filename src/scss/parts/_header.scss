@@ -25,3 +25,20 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .header {
+        padding-bottom: $mmargin;
+
+        p {
+            font-size: $fmtitle;
+            overflow: hidden;
+            padding-bottom: $mmargin;
+        }
+
+        a {
+            font-size: $fmbody;
+            padding: $pbutton;
+        }
+    }
+}

@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @import "master";
 @import "parts/header";
 @import "parts/input";
 @import "parts/output";
+@import "parts/footer";
 
 * {
     padding: 0;
     margin: 0;
     color: $white;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Fira Code', monospace;
 }
 
 body {
@@ -24,20 +25,9 @@ body {
     padding: $margin;
     background-color: $black;
     gap: $margin;
-
-    .footer {
-        grid-area: footer;
-        position: absolute;
-        bottom: $margin;
-
-        p {
-            color: $grey;
-            font-size: $fbody;
-        }
-    }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: $mobile) {
     .grid {
         grid-template-areas: 
         'header'
@@ -45,22 +35,6 @@ body {
         'output'
         'footer';
         padding: $mmargin;
-
-        .header {
-            grid-area: header;
-            padding-bottom: $mmargin;
-
-            p {
-                font-size: 24pt;
-                overflow: hidden;
-                padding-bottom: $mmargin;
-            }
-
-            a {
-                font-size: $fmbody;
-                padding: 8px;
-            }
-        }
 
         .input {
             grid-area: input;
@@ -74,21 +48,6 @@ body {
                     padding: 8px;
                 }
             }
-        }
-
-        .output {
-            grid-area: output;
-            p.title {
-                font-size: $fmheader;
-            }
-            div {
-                font-size: $fmbody;
-            }
-        }
-        .footer {
-            grid-area: footer;
-            font-size: $fmbody;
-            bottom: $mmargin;
         }
     }
 }

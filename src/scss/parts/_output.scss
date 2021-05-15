@@ -2,6 +2,7 @@
 
 .output {
     grid-area: output;
+    margin-right: $margin;
 
     p.title {
         font-size: $fheader;
@@ -26,6 +27,20 @@
         .outputNumber {
             grid-area: output;
             text-align: right;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .output {
+        padding-right: $mmargin;
+        
+        p.title {
+            font-size: $fmheader;
+        }
+
+        div {
+            font-size: $fmbody;
         }
     }
 }

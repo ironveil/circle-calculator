@@ -1,0 +1,19 @@
+// SCSS file for the footer
+
+.footer {
+    grid-area: footer;
+    position: absolute;
+    bottom: $margin;
+
+    p {
+        color: $grey;
+        font-size: $fbody;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .footer {
+        font-size: $fmbody;
+        bottom: $mmargin;
+    }
+}
