@@ -35,19 +35,5 @@ body {
         'output'
         'footer';
         padding: $mmargin;
-
-        .input {
-            grid-area: input;
-            padding-bottom: $mmargin / 3;
-            p {
-                font-size: $fmheader;
-            }
-            .input {
-                input, button {
-                    font-size: $fmbody;
-                    padding: 8px;
-                }
-            }
-        }
     }
 }

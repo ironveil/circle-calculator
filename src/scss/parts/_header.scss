@@ -6,7 +6,7 @@
     // Title
     p {
         font-size: $ftitle;
-        padding-bottom: 16px;
+        //padding-bottom: 8px;
     }
 
     // Link to my GH
@@ -28,12 +28,12 @@
 
 @media only screen and (max-width: $mobile) {
     .header {
-        padding-bottom: $mmargin;
+        padding-bottom: $mmargin / 2;
 
         p {
             font-size: $fmtitle;
             overflow: hidden;
-            padding-bottom: $mmargin;
+            padding-bottom: 16px;
         }
 
         a {

@@ -64,3 +64,19 @@
         }
     }
 }
+
+@media only screen and (max-width: $mobile) {
+    .input {
+        grid-area: input;
+        padding-right: $mmargin / 2;
+        p {
+            font-size: $fmheader;
+        }
+        .input {
+            input, button {
+                font-size: $fmbody;
+                padding: $pmbutton;
+            }
+        }
+    }
+}
