@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 @import "master";
 @import "parts/header";
 @import "parts/input";
@@ -10,6 +10,12 @@
     margin: 0;
     color: $white;
     font-family: 'Fira Code', monospace;
+}
+
+@supports (font-variation-settings: normal) {
+    * {
+        font-family: 'Fira Code VF', monospace; 
+    }
 }
 
 body {
