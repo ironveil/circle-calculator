@@ -1,14 +1,15 @@
-// SCSS file for the output pane
-
+// Output pane
 .output {
     grid-area: output;
     margin-right: $margin;
 
+    // Title
     p.title {
         font-size: $fheader;
         padding-top: $ptext;
     }
 
+    // Each output strip
     div {
         width: 100%;
         display: grid;
@@ -31,10 +32,14 @@
     }
 }
 
+// Mobile CSS
 @media only screen and (max-width: $mobile) {
+
+    // Adapts the grid for mobile devices
     .output {
         padding-right: $mmargin;
         
+        // Changes font size
         p.title {
             font-size: $fmheader;
         }

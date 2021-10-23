@@ -1,3 +1,4 @@
+// Imports
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 @import "master";
 @import "parts/header";
@@ -5,6 +6,7 @@
 @import "parts/output";
 @import "parts/footer";
 
+// Global defaults
 * {
     padding: 0;
     margin: 0;
@@ -12,16 +14,19 @@
     font-family: 'Fira Code', monospace;
 }
 
+// Sets the font to variable if the browser supports it\
 @supports (font-variation-settings: normal) {
     * {
         font-family: 'Fira Code VF', monospace; 
     }
 }
 
+// Background
 body {
     background: $black;
 }
 
+// General grid
 .grid {
     display: grid;
     grid-template-areas: 
@@ -33,7 +38,10 @@ body {
     gap: $margin;
 }
 
+// Mobile CSS
 @media only screen and (max-width: $mobile) {
+
+    // Adapts the grid for mobile devices
     .grid {
         grid-template-areas: 
         'header'

@@ -1,5 +1,4 @@
-// SCSS file for the input pane
-
+// Input panel
 .input {
     grid-area: input;
 
@@ -65,13 +64,20 @@
     }
 }
 
+// Mobile CSS
 @media only screen and (max-width: $mobile) {
+
+    // Adapts the grid for mobile devices
     .input {
         grid-area: input;
         padding-right: $mmargin / 2;
+
+        // Changes font size
         p {
             font-size: $fmheader;
         }
+
+        // Changes the input size
         .input {
             input, button {
                 font-size: $fmbody;
